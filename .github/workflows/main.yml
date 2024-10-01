@@ -9,8 +9,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ASIA53MMGTC7BDP7ZLCX
-          aws-secret-access-key: Dyrb4VgzOn9lXFtHS1rYd1PE34glg2bF/qhRAxeu
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
       - name: Run CodeBuild
         uses: aws-actions/aws-codebuild-run-build@v1
